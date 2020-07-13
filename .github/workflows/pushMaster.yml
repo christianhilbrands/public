@@ -31,3 +31,4 @@ jobs:
       with:
         repository: christianhilbrands/public
         github_token: ${{ secrets.ACCESS_TOKEN }}
+        force: true
