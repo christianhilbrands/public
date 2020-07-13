@@ -19,8 +19,8 @@ jobs:
         fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
     - name: Create local changes
       run: |
-        rm -rf < remove-private.txt
-        rm -rf remove-private.txt
+        xargs rm -rf <remove-private.txt
+        xargs rm -rf remove-private.txt
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
