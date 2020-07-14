@@ -1,6 +1,7 @@
 on:
   push:
-    branches: [ devel ]
+    branches: 
+    - devel
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -11,4 +12,4 @@ jobs:
     - name: pull-request
       uses: repo-sync/pull-request@v2
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.ACCESS_TOKEN }}
